@@ -2,10 +2,12 @@
 
 A feature-complete, interactive **Inventory & Profit Calculation System** written in **x86 Assembly Language (8086 architecture)** for **CSE341: Microprocessors and Assembly Language**.
 
+Designed and tested to run seamlessly on **emu8086 - assembler and microprocessor emulator 4.08**.
+
 ---
 
 ## 📌 Project Overview
-This project provides a robust command-line interface (CLI) inventory management and financial analysis solution designed for 16-bit DOS environments (compatible with TASM, MASM, Emu8086, and DOSBox). It enables business managers to monitor stock levels in real time, manage prices, process dynamic sales and returns, analyze profit/loss margins, and inspect individual item details.
+This project provides a robust command-line interface (CLI) inventory management and financial analysis solution written in 8086 Assembly. It allows business managers to monitor stock levels in real time, manage prices, process dynamic sales and returns, analyze net profit/loss margins, and search individual item records.
 
 ---
 
@@ -41,6 +43,9 @@ This project provides a robust command-line interface (CLI) inventory management
 
 ## 🛠 Technical Architecture
 
+### Primary Software Environment
+- **Emulator / Assembler**: **emu8086 - assembler and microprocessor emulator 4.08**
+
 ### Memory Model & Interrupts
 - **Memory Model**: `.MODEL SMALL` with `.STACK 100H`
 - **Interrupts**: Uses DOS Interrupt `INT 21H` services:
@@ -58,13 +63,15 @@ The system manages 5 products using 16-bit Word (`DW`) arrays:
 
 ---
 
-## 💻 How to Run (DOSBox + TASM)
+## 💻 How to Run
 
-### Prerequisites
-1. Installed **[DOSBox](https://www.dosbox.com/)**.
-2. **TASM** assembler binaries (`TASM.EXE` and `TLINK.EXE`).
+### Using **emu8086 (v4.08)** *(Recommended)*
+1. Download and open **emu8086 - assembler and microprocessor emulator 4.08**.
+2. Open `inventory_system.asm` inside **emu8086**.
+3. Click the **Emulate** button (or press `F5`) to compile and open the emulator window.
+4. Click **Run** (or press `r`) inside the emulator window to execute the program.
 
-### Execution Commands
+### Alternative Method (DOSBox + TASM)
 ```bash
 # 1. Mount project directory in DOSBox
 mount c C:\path\to\project
